@@ -1,6 +1,6 @@
 # Wordle Solver
 
-A simple Python script for finding solutions to a Wordle puzzle. Only tested with Python 3.9.
+A Python script for finding solutions to a Wordle puzzle. Only tested with Python 3.9.
 
  ## Usage
 
