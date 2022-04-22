@@ -37,8 +37,7 @@ with open(word_list_path, 'r') as file:
 
 pattern = ''
 for s in set(list(''.join(wrong_loc.values()))):
-    for c in s:
-        pattern += f'(?=.*{c})'
+    pattern += f'(?=.*{s})'
 
 for i in range(GUESS_LEN):
     g_c = guess[i]
