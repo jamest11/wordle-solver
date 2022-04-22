@@ -13,7 +13,7 @@ Run the script as follows: `python wordle_solver.py <guess> [exclusions]`
 The guess string has three options for each of the five letters in the puzzle:
 
 * Unknown: `-`
-* Known but wrong position: `[x]`
+* Correct but wrong position: `[x]`
   * Multiple letters can be provided: `[xy]`
 * Correct: `x`
 
