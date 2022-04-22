@@ -26,8 +26,10 @@ while re_search is not None:
 
 if len(guess) != GUESS_LEN or re.search('[^a-z|-]', guess) is not None:
     print("Error: Invalid guess argument", file=sys.stderr)
+    exit(1)
 elif re.search('[^a-z]', excl) is not None:
     print("Error: Invalid exclusions argument", file=sys.stderr)
+    exit(1)
 
 word_list_name = 'word_list.txt'
 word_list_path = f'{os.path.dirname(os.path.abspath(__file__))}/{word_list_name}'
