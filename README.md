@@ -6,7 +6,7 @@ A Python script for finding solutions to a Wordle puzzle. Only tested with Pytho
 
 The script takes two arguments from the command line: **guess** and **exclusions** (optional), then prints the possible solutions to the puzzle.
 
-Run the script as follows: `python wordle_solver.py <guess> [exclusions]`
+Run the script as follows: `python wordle_solver.py [guess] [exclusions]`
 
 ### Guess String
 
