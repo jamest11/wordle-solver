@@ -21,7 +21,7 @@ The guess string has three options for each of the five letters in the puzzle:
 
 List the letters that are not part of the solution as a string with no spaces: `abcde`
 
-### Example
+## Example
 
 `python wordle.py [w]-[n]-y ertiadc`
 
