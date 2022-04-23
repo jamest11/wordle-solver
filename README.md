@@ -14,7 +14,7 @@ The guess string has three options for each of the five letters in the puzzle:
 
 * Unknown: `-`
 * Wrong position: `[x]`
-  * Multiple letters can be provided: `[xy]`
+  * Multiple letters can be provided for a single position: `[xy]`
 * Correct: `x`
 
 ### Exclusions String
