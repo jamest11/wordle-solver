@@ -31,12 +31,6 @@ elif re.search('[^a-z]', excl) is not None:
     print("Error: Invalid exclusions argument", file=sys.stderr)
     exit(1)
 
-word_list_name = 'word_list.txt'
-word_list_path = f'{path.dirname(path.abspath(__file__))}/{word_list_name}'
-
-with open(word_list_path, 'r') as file:
-    words = file.read().splitlines()
-
 pattern = ''
 for c in set(list(''.join(wrong_pos.values()))):
     pattern += f'(?=.*{c})'
@@ -49,8 +43,14 @@ for i in range(GUESS_LEN):
     else:
         pattern += guess[i]
 
+word_list_name = 'word_list.txt'
+word_list_path = f'{path.dirname(path.abspath(__file__))}/{word_list_name}'
+
+with open(word_list_path, 'r') as file:
+    words = file.read().splitlines()
+
 r = re.compile(pattern)
-matches = list(filter(r.match, words))
+matches = filter(r.match, words)
 
 for word in matches:
     print(word)
