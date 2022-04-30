@@ -8,11 +8,11 @@ if len(sys.argv) != 3:
 
 GUESS_LEN = 5
 
-guess = sys.argv[1].lower()
-excl = sys.argv[2].lower()
+guess = sys.argv[1].upper()
+excl = sys.argv[2].upper()
 
 wrong_pos = {}
-pattern = '\[[a-z]+\]'
+pattern = '\[[A-Z]+\]'
 wp_search = re.search(pattern, guess)
 
 while wp_search is not None:
@@ -24,10 +24,10 @@ while wp_search is not None:
 
     wp_search = re.search(pattern, guess)
 
-if len(guess) != GUESS_LEN or re.search('[^a-z|-]', guess) is not None:
+if len(guess) != GUESS_LEN or re.search('[^A-Z|-]', guess) is not None:
     print("Error: Invalid guess argument", file=sys.stderr)
     exit(1)
-elif re.search('[^a-z]', excl) is not None:
+elif re.search('[^A-Z]', excl) is not None:
     print("Error: Invalid exclusions argument", file=sys.stderr)
     exit(1)
 
@@ -43,8 +43,7 @@ for i in range(GUESS_LEN):
     else:
         pattern += guess[i]
 
-word_list_name = 'word_list.txt'
-word_list_path = f'{path.dirname(path.abspath(__file__))}/{word_list_name}'
+word_list_path = path.join(path.dirname(path.abspath(__file__)), 'word_list.txt')
 
 with open(word_list_path, 'r') as file:
     words = file.read().splitlines()
