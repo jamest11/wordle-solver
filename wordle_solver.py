@@ -14,7 +14,7 @@ guess = sys.argv[1].lower()
 excl = sys.argv[2].lower()
 
 wrong_pos = {}
-pattern = '\[[A-Z]+\]'
+pattern = '\[[a-z]+\]'
 wp_search = re.search(pattern, guess)
 
 while wp_search is not None:
@@ -26,10 +26,10 @@ while wp_search is not None:
 
     wp_search = re.search(pattern, guess)
 
-if len(guess) != GUESS_LEN or re.search('[^A-Z|-]', guess) is not None:
+if len(guess) != GUESS_LEN or re.search('[^a-z|-]', guess) is not None:
     print("Error: Invalid guess argument", file=sys.stderr)
     exit(1)
-elif re.search('[^A-Z]', excl) is not None:
+elif re.search('[^a-z]', excl) is not None:
     print("Error: Invalid exclusions argument", file=sys.stderr)
     exit(1)
 
