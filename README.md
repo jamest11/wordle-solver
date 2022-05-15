@@ -25,4 +25,4 @@ List the letters that are not part of the solution as a string with no spaces: `
 
 `python wordle.py [w]-[n]-y ertiadc`
 
-**Output**: SNOWY
+**Output**: snowy
