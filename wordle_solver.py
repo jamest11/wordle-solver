@@ -10,8 +10,8 @@ if len(sys.argv) != 3:
 
 GUESS_LEN = 5
 
-guess = sys.argv[1].upper()
-excl = sys.argv[2].upper()
+guess = sys.argv[1].lower()
+excl = sys.argv[2].lower()
 
 wrong_pos = {}
 pattern = '\[[A-Z]+\]'
